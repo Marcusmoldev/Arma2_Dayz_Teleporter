@@ -42,7 +42,7 @@ In the case that you dont have a fn_selfActions, you probably dont have a compil
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)**
 
-In fn_selfActions , search for : 
+In fn_selfActions , search for this line near the bottom : 
 
 	player removeAction s_player_plot_boundary;
 
