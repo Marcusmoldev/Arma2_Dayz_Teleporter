@@ -43,11 +43,11 @@ In the case that you dont have a fn_selfActions, you probably dont have a compil
 **Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)**
 
 In fn_selfActions , search for : 
-_player removeAction s_player_plot_boundary;_
+	player removeAction s_player_plot_boundary;
 
 Above it, paste this:
-_	player removeAction s_player_Teleport;
-s_player_Teleport = -1;_
+	player removeAction s_player_Teleport;
+	s_player_Teleport = -1;
 
 
 Now you can close and save fn_selfActions.
@@ -56,16 +56,16 @@ Now you can close and save fn_selfActions.
 **Step 4.**
 If you have your own compiles, open your compiles.sqf and paste this line of code the same way its done in the file I provided.
 
-_fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";_
+	fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
 
 
 If you dont have a custom compiles you will have to add a line of code to your init.sqf
 
 Search for this line :
-_call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";_
+	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 
 paste this line below :
-_call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";_
+	call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Step 5.**
@@ -80,10 +80,10 @@ If you dont have a custom variables, use the one I provided.
 If you dont have a custom variables you will have to add a line of code to your init.sqf
 
 Search for this line :
-_call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";_
+	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 
 paste this line below :
-_call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";_
+	call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -92,13 +92,13 @@ Add the "vendmachine1_kit" class to your traders as a buyable item, or lootspawn
 
 Here is the trader category on my server :
 
-_class Category_924 {
-	class vendmachine1_kit {
-		type = "trade_items";
-		buy[] = {50000,"ItemGoldBar"};
-		sell[] = {50000,"ItemGoldBar"};
+	class Category_924 {
+		class vendmachine1_kit {
+			type = "trade_items";
+			buy[] = {50000,"ItemGoldBar"};
+			sell[] = {50000,"ItemGoldBar"};
+		};
 	};
-};_
 
 As this is a script tutorial I will not focus on Trader Editing. Refer to this video by JasonTM instead.
 https://youtu.be/Dy0TP8Pi3nk
