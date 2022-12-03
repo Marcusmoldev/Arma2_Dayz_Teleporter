@@ -14,10 +14,10 @@ Go to your fn_selfActions.sqf which should be located at \dayz_code\compile\fn_s
 
 Search for this piece of code:
 
-player removeAction s_player_manageDoor;
+_player removeAction s_player_manageDoor;
 		s_player_manageDoor = -1;
 	};
-
+_
 Paste this within quotes below:
 
 
@@ -43,60 +43,62 @@ In the case that you dont have a fn_selfActions, you probably dont have a compil
 **Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)**
 
 In fn_selfActions , search for : 
-player removeAction s_player_plot_boundary;
+_player removeAction s_player_plot_boundary;_
 
 Above it, paste this:
-	player removeAction s_player_Teleport;
-s_player_Teleport = -1;
+_	player removeAction s_player_Teleport;
+s_player_Teleport = -1;_
 
 
 Now you can close and save fn_selfActions.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Step 4.
+**Step 4.**
 If you have your own compiles, open your compiles.sqf and paste this line of code the same way its done in the file I provided.
 
-fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
+_fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";_
 
 
 If you dont have a custom compiles you will have to add a line of code to your init.sqf
 
 Search for this line :
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+_call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";_
 
 paste this line below :
-call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
+_call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";_
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Step 5.
+**Step 5.**
 
 In the Variables.sqf
-paste this line the same way it is done in the file i provided: s_player_Teleport = -1;
+paste this line the same way it is done in the file i provided: 
+
+_s_player_Teleport = -1;_
+
 
 If you dont have a custom variables, use the one I provided.
-
 If you dont have a custom variables you will have to add a line of code to your init.sqf
 
 Search for this line :
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+_call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";_
 
 paste this line below :
-call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
+_call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";_
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Step 6.
+**Step 6.**
 Add the "vendmachine1_kit" class to your traders as a buyable item, or lootspawn.
 
 Here is the trader category on my server :
 
-class Category_924 {
+_class Category_924 {
 	class vendmachine1_kit {
 		type = "trade_items";
 		buy[] = {50000,"ItemGoldBar"};
 		sell[] = {50000,"ItemGoldBar"};
 	};
-};
+};_
 
 As this is a script tutorial I will not focus on Trader Editing. Refer to this video by JasonTM instead.
 https://youtu.be/Dy0TP8Pi3nk
