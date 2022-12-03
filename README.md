@@ -43,9 +43,11 @@ In the case that you dont have a fn_selfActions, you probably dont have a compil
 **Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)**
 
 In fn_selfActions , search for : 
+
 	player removeAction s_player_plot_boundary;
 
 Above it, paste this:
+
 	player removeAction s_player_Teleport;
 	s_player_Teleport = -1;
 
@@ -62,9 +64,11 @@ If you have your own compiles, open your compiles.sqf and paste this line of cod
 If you dont have a custom compiles you will have to add a line of code to your init.sqf
 
 Search for this line :
+
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 
 paste this line below :
+
 		call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
