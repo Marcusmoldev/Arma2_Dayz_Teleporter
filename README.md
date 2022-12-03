@@ -1,15 +1,14 @@
-Arma2_Dayz_Teleporter
-A teleporter script I wrote for Arma 2 Dayz
-///////////////////////////////////////////////////////////////////////////
-// Written by MarcusMolDev (Macintosh) @ Joint Forces Gaming - 2022.12.03//
-///////////////////////////////////////////////////////////////////////////
 
-Installation of teleporter script. This script is only client side.
+ Written by MarcusMolDev (Macintosh) @ Joint Forces Gaming - 2022.12.03
+
+Installation of teleporter script. This script is only client side
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Step 1.
+**Step 1.**
 Unpack your Mission PBO and place the script and the audio files in the same folder structure which I have specified.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Step 2.
+**Step 2.**
 
 Go to your fn_selfActions.sqf which should be located at \dayz_code\compile\fn_selfActions.sqf
 
@@ -41,7 +40,7 @@ If you dont have a fn_selfActions.sqf , you can simply use the one I provided in
 In the case that you dont have a fn_selfActions, you probably dont have a compiles either, so copy that one over as well.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)
+**Step 3. (this step can be ignored if you copied over the fn_selfActions I provide)**
 
 In fn_selfActions , search for : 
 player removeAction s_player_plot_boundary;
@@ -52,6 +51,7 @@ s_player_Teleport = -1;
 
 
 Now you can close and save fn_selfActions.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Step 4.
 If you have your own compiles, open your compiles.sqf and paste this line of code the same way its done in the file I provided.
@@ -66,6 +66,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 
 paste this line below :
 call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Step 5.
 
@@ -81,6 +82,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 
 paste this line below :
 call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 6.
