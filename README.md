@@ -62,10 +62,10 @@ If you have your own compiles, open your compiles.sqf and paste this line of cod
 If you dont have a custom compiles you will have to add a line of code to your init.sqf
 
 Search for this line :
-	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 
 paste this line below :
-	call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
+		call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Step 5.**
@@ -73,17 +73,17 @@ paste this line below :
 In the Variables.sqf
 paste this line the same way it is done in the file i provided: 
 
-_s_player_Teleport = -1;_
+	s_player_Teleport = -1;
 
 
 If you dont have a custom variables, use the one I provided.
 If you dont have a custom variables you will have to add a line of code to your init.sqf
 
 Search for this line :
-	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 
 paste this line below :
-	call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
+		call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
