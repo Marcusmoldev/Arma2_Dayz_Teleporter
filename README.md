@@ -80,9 +80,11 @@ If you dont have a custom variables, use the one I provided.
 If you dont have a custom variables you will have to add a line of code to your init.sqf
 
 Search for this line :
+
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 
 paste this line below :
+
 		call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
