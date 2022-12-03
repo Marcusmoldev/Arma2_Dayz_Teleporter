@@ -14,10 +14,10 @@ Go to your fn_selfActions.sqf which should be located at \dayz_code\compile\fn_s
 
 Search for this piece of code:
 
-_player removeAction s_player_manageDoor;
-		s_player_manageDoor = -1;
-	};
-_
+	player removeAction s_player_manageDoor;
+			s_player_manageDoor = -1;
+		};
+
 Paste this within quotes below:
 
 
