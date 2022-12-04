@@ -85,6 +85,8 @@ if(_isPlayersPortal != _playerPUID) then
 					(vehicle player) setPosATL [_pos select 0, _pos select 1, _pos select 2];
 					sleep 21;
 					ppEffectDestroy _effect;
+					ppEffectDestroy _ppGrain;
+					
 					titleText["","BLACK IN",8];
 					
 					player SWITCHMOVE "AmovPpneMstpSnonWnonDnon_healed"; //getting back up anim
